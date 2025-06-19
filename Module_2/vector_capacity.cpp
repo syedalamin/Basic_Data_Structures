@@ -23,7 +23,7 @@ int main()
   // v.clear(); //! O(n)
   // clear dose not remove value from memory but it's removed only size from memory
 
-  v.resize(7, 100);   //!O(n, k);
+  v.resize(7, 100); //! O(n, k);
 
   for (int i = 0; i < v.size(); i++)
   {
