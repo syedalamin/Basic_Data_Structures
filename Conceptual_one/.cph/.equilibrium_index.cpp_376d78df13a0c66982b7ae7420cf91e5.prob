@@ -1,0 +1,1 @@
+{"name":"Local: equilibrium_index","url":"c:\\Project\\Phitron\\Basic_Data_Structures\\Conceptual_one\\equilibrium_index.cpp","tests":[{"id":1750880614521,"input":"7\n-7 1 5 2 -4 3 0","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Project\\Phitron\\Basic_Data_Structures\\Conceptual_one\\equilibrium_index.cpp","group":"local","local":true}
