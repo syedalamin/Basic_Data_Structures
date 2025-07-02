@@ -1,0 +1,1 @@
+{"name":"Local: linked_list_input","url":"c:\\Project\\Phitron\\Basic_Data_Structures\\Module_7\\linked_list_input.cpp","tests":[{"id":1751428144151,"input":"10 20 30 40 50 100 -1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Project\\Phitron\\Basic_Data_Structures\\Module_7\\linked_list_input.cpp","group":"local","local":true}
