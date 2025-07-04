@@ -20,10 +20,11 @@ void insert_at_any_position(Node *&head, int idx, int val)
   for (int i = 1; i < idx; i++) //! O(n);
   {
     temp = temp->next;
+    if (temp == NULL)
+      return;
   }
   newnode->next = temp->next;
   temp->next = newnode;
-  
 }
 
 void print_linked_list(Node *head)
@@ -45,8 +46,7 @@ int main()
   head->next = a;
   a->next = b;
 
-  insert_at_any_position(head, 2, 100);
-  insert_at_any_position(head, 1, 200);
+  insert_at_any_position(head, 4, 100);
 
   print_linked_list(head);
 
