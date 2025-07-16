@@ -52,11 +52,11 @@ int max_find(Node *head)
   Node *temp = head;
   while (temp != NULL)
   {
-    if (maxs < temp->val)
-    {
-      // max = temp->val; // manual
-      maxs= max(maxs, temp->val);
-    }
+    // if (maxs < temp->val)
+    // {
+    // max = temp->val; // manual
+    // }
+    maxs = max(maxs, temp->val);
     temp = temp->next;
   }
 

@@ -13,7 +13,7 @@ public:
   }
 };
 
-void insert_at_tail(Node *&head, Node *&tail, int val)
+void inserted_at_tail(Node *&head, Node *&tail, int val)
 {
   Node *newnode = new Node(val);
   if (head == NULL)
@@ -21,6 +21,7 @@ void insert_at_tail(Node *&head, Node *&tail, int val)
     head = newnode;
     tail = newnode;
   }
+
   tail->next = newnode;
   tail = tail->next;
 }
@@ -28,6 +29,7 @@ void insert_at_tail(Node *&head, Node *&tail, int val)
 void print_linked_list(Node *head)
 {
   Node *temp = head;
+
   while (temp != NULL)
   {
     cout << temp->val << " ";
@@ -35,16 +37,20 @@ void print_linked_list(Node *head)
   }
 }
 
-void deleted_any(Node *head, int idx)
+void reverse_linked_list(Node *&head, Node *&tail, Node *temp)
 {
-  Node *temp = head;
-  for (int i = 0; i < idx -1; i++)
+  if (temp->next == NULL)
   {
-    temp = temp->next;
+    head = temp;
+    return;
   }
-  Node * deleteNode = temp->next;
-  temp->next = temp->next->next;
-  delete deleteNode;
+
+  reverse_linked_list(head, tail, temp->next);
+
+  temp->next->next = temp;
+  temp->next = NULL;
+
+  tail = temp;
 }
 
 int main()
@@ -53,7 +59,6 @@ int main()
   Node *tail = NULL;
 
   int val;
-
   while (true)
   {
     cin >> val;
@@ -61,9 +66,11 @@ int main()
     {
       break;
     }
-    insert_at_tail(head, tail, val);
+    inserted_at_tail(head, tail, val);
   }
-  deleted_any(head, 0);
+
+  reverse_linked_list(head, tail, head);
+
   print_linked_list(head);
   return 0;
 }

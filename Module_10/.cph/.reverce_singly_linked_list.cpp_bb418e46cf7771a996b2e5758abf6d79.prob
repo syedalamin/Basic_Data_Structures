@@ -1,0 +1,1 @@
+{"name":"Local: reverce_singly_linked_list","url":"c:\\Project\\Phitron\\Module_10\\reverce_singly_linked_list.cpp","tests":[{"id":1752025925939,"input":"10 20 30 40 50 -1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Project\\Phitron\\Module_10\\reverce_singly_linked_list.cpp","group":"local","local":true}

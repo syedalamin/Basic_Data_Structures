@@ -6,49 +6,53 @@ class Node
 public:
   int val;
   Node *next;
+  Node *prev;
   Node(int val)
   {
     this->val = val;
     this->next = NULL;
+    this->prev = NULL;
   }
 };
 
 void insert_at_tail(Node *&head, Node *&tail, int val)
 {
-  Node *newnode = new Node(val);
+  Node *newNode = new Node(val);
+
   if (head == NULL)
   {
-    head = newnode;
-    tail = newnode;
+    head = newNode;
+    tail = newNode;
   }
-  tail->next = newnode;
-  tail = tail->next;
+
+  tail->next = newNode;
+  newNode->prev = tail;
+  tail = newNode;
 }
 
 void print_linked_list(Node *head)
 {
   Node *temp = head;
+
   while (temp != NULL)
   {
     cout << temp->val << " ";
     temp = temp->next;
   }
+  cout << endl;
 }
 
-void deleted_any(Node *head, int idx)
+void reverse_doubly(Node *head, Node *tail)
 {
-  Node *temp = head;
-  for (int i = 0; i < idx -1; i++)
+  for (Node *i = head, *j = tail; i != j && i->prev != j; i = i->next, j = j->prev)
   {
-    temp = temp->next;
+    swap(i->val, j->val);
   }
-  Node * deleteNode = temp->next;
-  temp->next = temp->next->next;
-  delete deleteNode;
 }
 
 int main()
 {
+
   Node *head = NULL;
   Node *tail = NULL;
 
@@ -63,7 +67,9 @@ int main()
     }
     insert_at_tail(head, tail, val);
   }
-  deleted_any(head, 0);
+
+  reverse_doubly(head, tail);
   print_linked_list(head);
+
   return 0;
 }

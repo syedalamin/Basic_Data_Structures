@@ -46,6 +46,7 @@ void printing_linked_list(Node *head)
   }
   cout << endl;
 }
+
 void sort_linked_list(Node *head)
 {
 
@@ -88,30 +89,6 @@ int main()
   }
   sort_linked_list(head);
 
-  // Node *temp = head;
-  // int idx = 0;
-  // while (temp->next != NULL)
-  // {
-
-  //   if (temp->val == temp->next->val)
-  //   {
-  //     // cout << "duplicate" << endl;
-  //     delete_at_any_pos(head, idx);
-
-  //     printing_linked_list(head);
-  //   }
-  //   else
-  //   {
-
-  //     temp = temp->next;
-  //     idx++;
-  //   }
-  // }
-
-  // cout << "Not duplicate" << endl;
-
-  //
-
   Node *i = head;
 
   while (i->next != NULL)
@@ -128,7 +105,6 @@ int main()
       }
       else
       {
-
         j = j->next;
       }
     }
