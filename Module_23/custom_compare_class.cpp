@@ -12,8 +12,8 @@ public:
     this->name = name;
     this->roll = roll;
     this->marks = marks;
-  }
-};
+  } 
+}; 
 
 class cmp
 {
